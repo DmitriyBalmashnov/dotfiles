@@ -2,17 +2,23 @@ return {
     -- treesitter
     {
         'nvim-treesitter/nvim-treesitter',
-        branch= 'master',
         lazy= false,
         build= ":TSUpdate",
-        config = function() require("nvim-treesitter.configs").setup({
-            ensure_installed = { "python", "lua", "markdown"},
-            highlight = {
-                enable = true,
-                additional_vim_regex_highlighting = false,
-            },
-            indent = {enable = true},
-        }) end,
+        branch= "main",
+        config = function()
+        require("nvim-treesitter").install {
+            "python",
+            "lua",
+            "markdown",
+            "markdown_inline"
+        }
+        vim.api.nvim_create_autocmd('FileType', {
+            pattern = { '<filetype' },
+            callback = function() vim.treesitter.start() end,
+        })
+
+        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        end,
     },
     -- colorscheme
     {
@@ -33,7 +39,6 @@ return {
     },
 
     --auxillary
-    'nvim-treesitter/playground',
     'theprimeagen/harpoon',
     'mbbill/undotree',
     'tpope/vim-fugitive',

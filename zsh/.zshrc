@@ -69,3 +69,7 @@ setopt HIST_IGNORE_DUPS   # Don't record same line twice
 setopt HIST_IGNORE_SPACE  # Don't record lines starting with space
 
 eval "$(starship init zsh)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

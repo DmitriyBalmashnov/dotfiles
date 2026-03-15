@@ -1,0 +1,37 @@
+# local files and secrets.
+*.local
+*.secret
+.env
+secret.sh
+
+# Shell history
+.zsh_history
+.bash_history
+.zcompdump*
+
+# SSH keys and authorized hosts
+.ssh/
+id_rsa*
+id_ed25519*
+known_hosts
+authorized_keys
+
+# Tmux plugins and saved sessions
+.tmux/plugins/
+resurrect/
+
+# Neovim swap files and undo history
+*.swp
+*.swo
+undo/
+.netrwhist
+
+# Node/Python junk (if you use local environments)
+node_modules/
+__pycache__/
+.venv/
+
+# System files
+.DS_Store
+Thumbs.db
+*.tmp

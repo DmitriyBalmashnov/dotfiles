@@ -189,6 +189,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id uv run ~/.config/i3/workspace_wallpapers.py
 
 exec_always --no-startup-id picom -b
 

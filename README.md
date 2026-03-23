@@ -17,7 +17,7 @@ A modular, GPU-accelerated development environment themed with [Catppuccin Mocha
 
 ### 1. Prerequisites
 Ensure you have the following installed on your system:
-- `zsh`, `tmux`, `neovim`, `kitty`
+- `zsh`, `tmux`, `neovim`, `kitty`, `uv`, `feh`
 - [Starship](https://starship.rs/install.sh)
 - [GNU Stow](https://www.gnu.org/software/stow/)
 - A [Nerd Font](https://www.nerdfonts.com/) (e.g., JetBrainsMono Nerd Font) installed in KiTTY.

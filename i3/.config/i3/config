@@ -79,10 +79,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+percent split h
+bindsym $mod+b split h
 
 # split in vertical orientation
-bindsym $mod+quotedbl split v
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -185,6 +185,9 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
+
+# Screenshot bind
+bindsym $mod+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
 
 bindsym $mod+r mode "resize"
 
